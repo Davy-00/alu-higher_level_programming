@@ -5,8 +5,6 @@
 class Square:
     """
     Defines a Square and its basic properties
-    >>> square_1 = Square()
-    >>> square_2 = Square(7)
     """
 
     def __init__(self, size=0) -> None:
@@ -21,3 +19,11 @@ class Square:
             raise ValueError("size must be >= 0")
 
         self.__size = size
+
+    def area(self) -> int:
+        """
+        Calculates and returns the area of the square
+        :return: the area of the square
+        """
+
+        return self.__size ** 2
